@@ -39,14 +39,12 @@ namespace ActiveUp.Net.Security
                     else if (value.Equals("-")) policy._o = OutboundSigningPolicy.All;
                     else policy._o = OutboundSigningPolicy.OtherOrNoPolicy;
                 }
-                else if (tag.Equals("t")) policy._t = value.Equals("y");
             }
             return policy;
         }
         
         private string _n;
         private OutboundSigningPolicy _o = OutboundSigningPolicy.Some;
-        private bool _t;
         private Address _r = new Address();
 
         public string Notes

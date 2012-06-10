@@ -17,9 +17,6 @@
 
 using System;
 using System.Data;
-#if !PocketPC
-using System.Web.UI;
-#endif
 using System.Collections;
 using System.ComponentModel;
 #if !PocketPC
@@ -203,8 +200,6 @@ namespace ActiveUp.Net.Mail
 		{
 			try 
 			{
-
-				string dataBinderVal = string.Empty;
 				System.Data.DataColumnCollection columns;
 				IEnumerator items = GetEnumerator(dataSource);
 				if (items != null)

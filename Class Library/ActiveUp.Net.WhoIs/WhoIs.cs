@@ -866,19 +866,12 @@ namespace ActiveUp.Net.WhoIs
 				servers = _servers;
 
 			string domainExt = "";
-			string domainName = "";
 
 			int indexSeparator = domainToQuery.IndexOf(".");
 			if (indexSeparator == -1)
-				throw new WhoisException(string.Format("The domain extention is not present in '{0}'",domainToQuery));
+				throw new WhoisException(string.Format("The domain extension is not present in '{0}'",domainToQuery));
 			
-			domainName = domainToQuery.Substring(0,indexSeparator);
 			domainExt = domainToQuery.Substring(indexSeparator);
-
-#if (TRIAL)
-			if (domainExt.ToUpper() != ".ORG")
-				throw new TrialException();
-#endif
 
 			Server whoisServer = null;
 			if (servers.Count == 1)

@@ -378,8 +378,6 @@ namespace ActiveQLibrary.CustomControl
 
 		private void DrawCheckedRectangle(Graphics g, Rectangle bounds)
 		{
-			int checkTop = bounds.Top + (itemHeight - BITMAP_SIZE)/2;
-			int checkLeft = bounds.Left + ( STRIPE_WIDTH - BITMAP_SIZE)/2;
 			g.FillRectangle(new SolidBrush(selectionColor), bounds.Left+1, bounds.Top+1, STRIPE_WIDTH-3, bounds.Height-3);
 			g.DrawRectangle(new Pen(borderColor), bounds.Left+1, bounds.Top+1, STRIPE_WIDTH-3, bounds.Height-3);
 		}
@@ -417,7 +415,7 @@ namespace ActiveQLibrary.CustomControl
 						RECT rc = new RECT();
 						IntPtr parentHandle = Parent.Handle;
 						uint index = (uint)Index;
-						bool success = WindowsAPI.GetMenuItemRect(IntPtr.Zero, parentHandle, index, ref rc);
+						WindowsAPI.GetMenuItemRect(IntPtr.Zero, parentHandle, index, ref rc);
 						Rectangle menuRect = new Rectangle(rc.left, rc.top, rc.right-rc.left, rc.bottom-rc.top);
 						Point mp = Control.MousePosition;
 						

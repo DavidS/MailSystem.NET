@@ -123,7 +123,7 @@ namespace ActiveUp.Net.Mail
 		/// <summary>
 		/// Event fired when the object is connected to the remote server or when connection failed.
 		/// </summary>
-		public event ActiveUp.Net.Mail.ConnectedEventHandler Connected;
+		public new event ActiveUp.Net.Mail.ConnectedEventHandler Connected;
 		/// <summary>
 		/// Event fired when attempting to disconnect from the remote server.
 		/// </summary>

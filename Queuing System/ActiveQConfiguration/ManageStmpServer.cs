@@ -418,10 +418,9 @@ namespace ActiveQConfiguration
 			{
 				_listServers.Add(new SmtpServer(smtpServerForm.Host,smtpServerForm.Port,smtpServerForm.Username,smtpServerForm.Password));
 
-				ListViewItem.ListViewSubItem subItem = null;
 				ListViewItem lvi =_lvItem.Items.Add(smtpServerForm.Host);
 				lvi.ImageIndex = 0;
-				subItem = lvi.SubItems.Add(smtpServerForm.Port.ToString());
+				lvi.SubItems.Add(smtpServerForm.Port.ToString());
 			}
 
 			EnableDisableArrow();
@@ -545,10 +544,9 @@ namespace ActiveQConfiguration
 				{
 					_listServers.Add(new SmtpServer(smtpServer.Host,smtpServer.Port,smtpServer.Username,smtpServer.Password));
 
-					ListViewItem.ListViewSubItem subItem = null;
 					ListViewItem lvi =_lvItem.Items.Add(smtpServer.Host);
 					lvi.ImageIndex = 0;
-					subItem = lvi.SubItems.Add(smtpServer.Port.ToString());
+					lvi.SubItems.Add(smtpServer.Port.ToString());
 				}
 			}
 		}

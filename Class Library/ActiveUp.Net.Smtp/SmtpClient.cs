@@ -83,7 +83,7 @@ namespace ActiveUp.Net.Mail
 		/// <summary>
 		/// Event fired when the object is connected to the remote server or when connection failed.
 		/// </summary>
-		public event ActiveUp.Net.Mail.ConnectedEventHandler Connected;
+		public new event ActiveUp.Net.Mail.ConnectedEventHandler Connected;
 		/// <summary>
 		/// Event fired when attempting to disconnect from the remote server.
 		/// </summary>
@@ -1904,7 +1904,7 @@ namespace ActiveUp.Net.Mail
 		        {
 			        try
 			        {
-				        string rep = this.Command("vrfy "+address,250);
+				        this.Command("vrfy "+address,250);
 				        return true;
 			        }
 			        catch
@@ -2783,8 +2783,6 @@ namespace ActiveUp.Net.Mail
                     /// </example>
                     public static int DirectSendCollection(MessageCollection messages, ref SmtpExceptionCollection errors)
                     {
-                        string domain = string.Empty;
-                        string samer = string.Empty;
                         int sent = 0;
                         foreach (ActiveUp.Net.Mail.Message message in messages)
                         {

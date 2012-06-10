@@ -280,7 +280,6 @@ namespace ActiveUp.Net.Mail
         {
             ActiveUp.Net.Mail.AddressCollection invalids = new ActiveUp.Net.Mail.AddressCollection();
             ActiveUp.Net.Mail.AddressCollection valids = new ActiveUp.Net.Mail.AddressCollection();
-            System.Collections.Specialized.HybridDictionary ads = new System.Collections.Specialized.HybridDictionary();
             for (int i = 0; i < addresses.Count; i++)
                 if (!ActiveUp.Net.Mail.Validator.ValidateSyntax(addresses[i].Email)) invalids.Add(addresses[i]);
                 else valids.Add(addresses[i]);
@@ -386,7 +385,6 @@ namespace ActiveUp.Net.Mail
         {
             ActiveUp.Net.Mail.AddressCollection valids = new ActiveUp.Net.Mail.AddressCollection();
             ActiveUp.Net.Mail.AddressCollection valids1 = new ActiveUp.Net.Mail.AddressCollection();
-            System.Collections.Specialized.HybridDictionary ads = new System.Collections.Specialized.HybridDictionary();
             for (int i = 0; i < addresses.Count; i++)
                 if (ActiveUp.Net.Mail.Validator.ValidateSyntax(addresses[i].Email)) valids.Add(addresses[i]);
 #if !PocketPC
@@ -497,7 +495,6 @@ namespace ActiveUp.Net.Mail
         {
             ActiveUp.Net.Mail.AddressCollection invalids = new ActiveUp.Net.Mail.AddressCollection();
             ActiveUp.Net.Mail.AddressCollection valids = new ActiveUp.Net.Mail.AddressCollection();
-            System.Collections.Specialized.HybridDictionary ads = new System.Collections.Specialized.HybridDictionary();
             for (int i = 0; i < addresses.Count; i++)
                 if (!ActiveUp.Net.Mail.Validator.ValidateSyntax(addresses[i].Email)) invalids.Add(addresses[i]);
                 else valids.Add(addresses[i]);
@@ -609,7 +606,6 @@ namespace ActiveUp.Net.Mail
         {
             ActiveUp.Net.Mail.AddressCollection valids = new ActiveUp.Net.Mail.AddressCollection();
             ActiveUp.Net.Mail.AddressCollection valids1 = new ActiveUp.Net.Mail.AddressCollection();
-            System.Collections.Specialized.HybridDictionary ads = new System.Collections.Specialized.HybridDictionary();
             for (int i = 0; i < addresses.Count; i++)
                 if (ActiveUp.Net.Mail.Validator.ValidateSyntax(addresses[i].Email)) valids.Add(addresses[i]);
 #if !PocketPC

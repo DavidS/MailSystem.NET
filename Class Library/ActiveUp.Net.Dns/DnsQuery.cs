@@ -82,6 +82,8 @@ namespace ActiveUp.Net.Dns
     {
         public DnsQueryException(string msg, Exception[] exs) : base(msg) { exceptions = exs; }
 
+        public List<Exception> Exceptions { get { return new List<Exception>(exceptions); } }
+
         private Exception[] exceptions;
     }
 
@@ -340,7 +342,6 @@ namespace ActiveUp.Net.Dns
             //IPAddressCollection dnsServers = null;
 
 #if !PocketPC
-            IPGlobalProperties computerProperties = IPGlobalProperties.GetIPGlobalProperties();
             NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
 
             foreach (NetworkInterface adapter in nics)

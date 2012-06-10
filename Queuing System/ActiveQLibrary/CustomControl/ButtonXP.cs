@@ -117,7 +117,7 @@ namespace ActiveQLibrary.CustomControl
 						StringBuilder sb1 = new StringBuilder(256);
 						StringBuilder sb2 = new StringBuilder(256);
 						StringBuilder sb3 = new StringBuilder(256);
-						int i = GetCurrentThemeName(sb1, sb1.Capacity, sb2, sb2.Capacity, sb3, sb3.Capacity);
+						GetCurrentThemeName(sb1, sb1.Capacity, sb2, sb2.Capacity, sb3, sb3.Capacity);
 
 						string str = sb2.ToString();
 

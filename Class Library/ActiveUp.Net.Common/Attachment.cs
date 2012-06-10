@@ -19,7 +19,7 @@ namespace ActiveUp.Net.Mail
 {
 #region Attachment Object
 	/// <summary>
-	/// Reprensents a file attachment (a MimePart with an attachment Content-Disposition).
+	/// Represents a file attachment (a MimePart with an attachment Content-Disposition).
 	/// Attachments are displayed only upon request of the receiving user, while EmbeddedObjects are displayed upon display of the message's content.
 	/// </summary>
 #if !PocketPC
@@ -27,16 +27,17 @@ namespace ActiveUp.Net.Mail
 #endif
     public class Attachment : ActiveUp.Net.Mail.MimePart
 	{
-		bool _isLoaded = false;
-		string _originalPath;
 		/// <summary>
 		/// Default constructor.
 		/// </summary>
 		public Attachment()
 		{
-
 		}
-		/*/// <summary>
+		/*
+        bool _isLoaded = false;
+        string _originalPath;
+
+        /// <summary>
 		/// Constructor.
 		/// </summary>
 		/// <param name="filePath">Path of the file to be treated as an attachment.</param>

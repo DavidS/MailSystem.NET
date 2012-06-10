@@ -37,7 +37,6 @@ namespace ActiveUp.Net.Mail
 #endif
     public class Validator
 	{
-		ActiveUp.Net.Mail.ServerCollection _dnsServers = new ActiveUp.Net.Mail.ServerCollection();
 		/// <summary>
 		/// Constructor.
 		/// </summary>
@@ -150,15 +149,8 @@ namespace ActiveUp.Net.Mail
                 {
                     if (server.Length > 3)
                     {
-                        //try
-                        //{
-                            ActiveUp.Net.Mail.Logger.AddEntry("Ask " + server + ":53 for TXT records.", 0);
-                            return GetTxtRecords(address, server, 53);
-                        //}
-                        //catch
-                        //{
-                            ActiveUp.Net.Mail.Logger.AddEntry("Can't connect to " + server + ":53", 0);
-                        //}
+                        ActiveUp.Net.Mail.Logger.AddEntry("Ask " + server + ":53 for TXT records.", 0);
+                        return GetTxtRecords(address, server, 53);
                     }
                 }
             }
@@ -301,7 +293,7 @@ namespace ActiveUp.Net.Mail
             {
                 response2 = udpClient.Receive(ref endPoint);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 udpClient.Close();
                 throw new System.Exception("Can't connect to DNS server.");
@@ -321,7 +313,7 @@ namespace ActiveUp.Net.Mail
 
             GetLabelsByPos(response2, ref pos);
             pos += 7;
-            int length = response2[pos];
+            // int length = response2[pos];
             byte[] data = new byte[response2.Length-pos-4];
             Array.Copy(response2, pos + 4, data, 0, response2.Length - pos - 4);
             

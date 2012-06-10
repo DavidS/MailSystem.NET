@@ -276,7 +276,7 @@ namespace ActiveUp.Net.Mail
         /// <summary>
         /// Event fired when the object is connected to the remote server or when connection failed.
         /// </summary>
-        public event ActiveUp.Net.Mail.ConnectedEventHandler Connected;
+        public new event ActiveUp.Net.Mail.ConnectedEventHandler Connected;
         /// <summary>
         /// Event fired when attempting to disconnect from the remote server.
         /// </summary>
@@ -446,7 +446,7 @@ namespace ActiveUp.Net.Mail
             {
                 this._sslStream.AuthenticateAsClient(sslHandShake.HostName, sslHandShake.ClientCertificates, sslHandShake.SslProtocol, sslHandShake.CheckRevocation);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 authenticationFailed = true;
             }
@@ -983,7 +983,6 @@ namespace ActiveUp.Net.Mail
             this.Command("IDLE");
 
             System.IO.StreamReader sr = new System.IO.StreamReader(this.GetStream(), System.Text.Encoding.ASCII);
-            System.Text.StringBuilder buffer = new System.Text.StringBuilder();
             string response = string.Empty;
             _idleInProgress = true;
             while (true)
@@ -1356,7 +1355,7 @@ namespace ActiveUp.Net.Mail
         /// imap.Disconnect();
         /// </code>
         /// </example>
-        public string Close()
+        public new string Close()
         {
             return this.Command("close");
         }

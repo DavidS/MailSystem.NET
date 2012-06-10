@@ -254,7 +254,7 @@ namespace ActiveUp.Net.Mail
                                 arr.Add(System.Convert.ToByte(System.Int32.Parse(String.Concat((char)input[i + 1], (char)input[i + 2]), System.Globalization.NumberStyles.HexNumber)));
                                 i += 3;
                             }
-                            catch (Exception ex)
+                            catch (Exception)
                             {
                                 arr.Add((byte)input[i]);
                                 i++;
@@ -269,7 +269,7 @@ namespace ActiveUp.Net.Mail
                     else break;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //throw;
                 //return input;

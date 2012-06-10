@@ -48,13 +48,10 @@ namespace ActiveUp.Net.Mail
                 case TrialStringType.ShortText:
                 default:
                     return stringToModify.Insert(randomPosition, shortText);
-                    break;
                 case TrialStringType.LongHtml:
                     return stringToModify.Insert(randomPosition, string.Format("<table bgcolor=\"#F00000\" border=\"1\"><tr><td>{0}</td></tr></table>", longText));
-                    break;
                 case TrialStringType.LongText:
                     return stringToModify.Insert(randomPosition, longText);
-                    break;
             }
         }
 

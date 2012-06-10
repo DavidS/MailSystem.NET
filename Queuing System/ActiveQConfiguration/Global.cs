@@ -106,9 +106,8 @@ namespace ActiveQConfiguration
 				_activeMail = Assembly.LoadFrom(_libraryMailFile);
                 _activeCommon = Assembly.LoadFrom(_libraryCommonFile);
                 _activeSmtp = Assembly.LoadFrom(_librarySmtpFile);
-				
-				object message = Activator.CreateInstance(_activeCommon.GetType("ActiveUp.Net.Mail.Message",true));
-				message = null;
+
+				Activator.CreateInstance(_activeCommon.GetType("ActiveUp.Net.Mail.Message",true));
 
 				_stateActiveMail = StateLibraryActiveMail.ok;
 

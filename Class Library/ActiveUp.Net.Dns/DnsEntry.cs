@@ -33,7 +33,7 @@ namespace ActiveUp.Net.Dns
             try
             {
                 domain = buffer.ReadDomainName();
-                byte b = buffer.ReadByte();
+                buffer.ReadByte();
                 recType = (RecordType)buffer.ReadShortInt();
                 classType = buffer.ReadShortInt();
                 ttl = buffer.ReadInt();

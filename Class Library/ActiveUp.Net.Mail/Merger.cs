@@ -27,10 +27,7 @@ using System.Web;
 #endif
 using System.Xml;
 using System.Text.RegularExpressions;
-using ActiveUp.Net.Mail;
-#if !PocketPC
-using System.Web.UI;
-#endif
+
 namespace ActiveUp.Net.Mail
 {
 	/// <summary>
@@ -89,9 +86,6 @@ namespace ActiveUp.Net.Mail
 			ActiveUp.Net.Mail.Logger.AddEntry("Binding text.", 1);
 
 			string newTemplate = string.Empty;
-
-			// Define the string that will be used to store the data binder property value
-			string dataBinderVal = string.Empty;
 
 			// Get the main datasource
 			IEnumerator items = GetEnumerator(dataSource);

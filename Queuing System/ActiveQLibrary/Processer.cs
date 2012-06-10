@@ -412,8 +412,6 @@ namespace ActiveQLibrary
 
 						foreach(SpooledObject Object in queuedObject)
 						{
-							TimeSpan ts = Object.SendingDate - DateTime.Now;
-
 							if (Object.SendingDate <= DateTime.Now)
 							{
 								QueueScheduled.ModifyState(Object.Name,StateSpooledObject.dispacher);

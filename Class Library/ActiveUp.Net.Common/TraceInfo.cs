@@ -15,9 +15,6 @@
 // along with SharpMap; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
 
-using ActiveUp.Net.Mail;
-using ActiveUp.Net.Mail;
-
 namespace ActiveUp.Net.Mail
 {
 	/// <summary>
@@ -63,7 +60,7 @@ namespace ActiveUp.Net.Mail
             this._id = id;
             this._date = date;
         }
-		string _from = string.Empty,_by = string.Empty,_via = string.Empty,_with = string.Empty,_for = string.Empty,_id = string.Empty,_source = string.Empty;
+		string _from = string.Empty,_by = string.Empty,_via = string.Empty,_with = string.Empty,_for = string.Empty,_id = string.Empty;
 		System.DateTime _date;
 
 		/// <summary>

@@ -372,7 +372,7 @@ namespace ActiveQLibrary
                     _activeCommon = Assembly.LoadFrom(_libraryCommonFile);
                     _activeSmtp = Assembly.LoadFrom(_librarySmtpFile);
 				}
-				catch (FileNotFoundException fe)
+				catch (FileNotFoundException)
 				{
                     
 				}
@@ -396,7 +396,7 @@ namespace ActiveQLibrary
 
                 }
 
-                object _message = Activator.CreateInstance(_activeCommon.GetType("ActiveUp.Net.Mail.Message",true));
+                Activator.CreateInstance(_activeCommon.GetType("ActiveUp.Net.Mail.Message",true));
                 _smtpServers = Activator.CreateInstance(_activeCommon.GetType("ActiveUp.Net.Mail.ServerCollection",true));
                 LoadConfig();
 				//_activeMail.GetType("ActiveUp.Mail.Common.LicenseInfo").GetProperty("License").SetValue(typeof(string),_config.ActiveMailLicense,null);

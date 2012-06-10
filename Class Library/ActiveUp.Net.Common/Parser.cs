@@ -996,7 +996,7 @@ namespace ActiveUp.Net.Mail
                 date = date.AddMinutes(-offset_minutes);
                 return date;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return DateTime.MinValue;
             }

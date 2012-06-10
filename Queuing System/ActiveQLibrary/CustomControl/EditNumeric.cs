@@ -81,28 +81,28 @@ namespace ActiveQLibrary.CustomControl
 				switch(m_inpType)
 				{
 					case NumEditType.Currency:
-						decimal dec = decimal.Parse(val);
+						decimal.Parse(val);
 						int pos = val.IndexOf(".");
 						if(pos != -1)
 							ret = val.Substring(pos).Length <= 3;	// 2 decimals + "."
 						break;
 					case NumEditType.Single:
-						float flt = float.Parse(val);
+						float.Parse(val);
 						break;
 					case NumEditType.Double:
-						double dbl = double.Parse(val);
+						double.Parse(val);
 						break;
 					case NumEditType.Decimal:
-						decimal dec2 = decimal.Parse(val);
+						decimal.Parse(val);
 						break;
 					case NumEditType.SmallInteger:
-						short s = short.Parse(val);
+						short.Parse(val);
 						break;
 					case NumEditType.Integer:
-						int i = int.Parse(val);
+						int.Parse(val);
 						break;
 					case NumEditType.LargeInteger:
-						long l = long.Parse(val);
+						long.Parse(val);
 						break;
 					default:
 						throw new ApplicationException();

@@ -52,15 +52,6 @@ namespace ActiveUp.Net.Mail
 		}
 
 		/// <summary>
-		/// Add an Address object.
-		/// </summary>
-		/// <param name="address">The Address object</param>
-		public void Add(Address address)
-		{
-			base.Add(address);
-		}
-
-		/// <summary>
 		/// Add an Address object using the specified Internet email (RFC 2822 addr-spec).
 		/// </summary>
 		/// <param name="email">The email</param>

@@ -15,8 +15,6 @@
 // along with SharpMap; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
 
-using ActiveUp.Net.Mail;
-using ActiveUp.Net.Mail;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System;
@@ -539,7 +537,7 @@ namespace ActiveUp.Net.Mail
         {
             get
             {
-                if (this.Trace.Count > 0 && this.Trace[0].Date != null)
+                if (this.Trace.Count > 0)
                     return this.Trace[0].Date;
                 else
                     return this.Date;

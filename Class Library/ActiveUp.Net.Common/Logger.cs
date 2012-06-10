@@ -38,9 +38,8 @@ namespace ActiveUp.Net.Mail
 		private static ArrayList _logEntries = new ArrayList();
 		private static bool _logInMemory = false, _disabled = false, _useTraceContext = false, _useTraceConsole = false;
 		private static int _logLevel = 0;
-		private static bool _isChecked = false;
-				
-		/// <summary>
+
+        /// <summary>
 		/// The default constructor.
 		/// </summary>
 		public Logger()

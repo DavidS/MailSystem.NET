@@ -27,8 +27,6 @@ using System.Web;
 #endif
 using System.Xml;
 using System.Text.RegularExpressions;
-using ActiveUp.Net.Mail;
-using ActiveUp.Net.Mail;
 
 namespace ActiveUp.Net.Mail
 {

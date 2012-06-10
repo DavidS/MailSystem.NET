@@ -15,8 +15,6 @@
 // along with SharpMap; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
 
-using ActiveUp.Net.Mail;
-using ActiveUp.Net.Mail;
 using System.Collections.Specialized;
 #if !PocketPC
 using System.Security.Cryptography.Pkcs;
@@ -179,7 +177,7 @@ namespace ActiveUp.Net.Mail
 
         #region Private fields
 
-        string _textContent, _contentName = string.Empty;
+        string _textContent;
         ContentDisposition _contentDisposition = new ContentDisposition();
         ContentType _contentType = new ContentType();
         byte[] _binaryContent = new byte[0];

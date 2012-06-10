@@ -430,7 +430,7 @@ namespace ActiveQLibrary
 			HttpWebResponse oWResponse =(HttpWebResponse) oWRequest.GetResponse(); 
 			Stream oS = oWResponse.GetResponseStream(); 
 			StreamReader oSReader = new StreamReader(oS,System.Text.Encoding.ASCII);
-			string result = oSReader.ReadToEnd();
+			oSReader.ReadToEnd();
 			oSReader.Close();
 			oS.Close();
 		}
