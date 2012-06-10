@@ -706,11 +706,7 @@ namespace ActiveUp.Net.Mail
 
                 filename = filename.Replace("\"", string.Empty);
 
-#if TRIAL
-                return ProductHelper.GetTrialString(Codec.RFC2047Decode(filename), TrialStringType.ShortText);
-#else
                 return Codec.RFC2047Decode(filename);
-#endif
             }
             set
             {

@@ -85,11 +85,7 @@ namespace ActiveUp.Net.Mail
 		{
 			get
 			{
-//#if TRIAL
-//                return ProductHelper.GetTrialString(this._name, TrialStringType.LongText);
-//#else
                 return _name;
-//#endif
 			}
 			set
 			{

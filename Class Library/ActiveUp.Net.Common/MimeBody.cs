@@ -77,20 +77,9 @@ namespace ActiveUp.Net.Mail
 		{
 			get
 			{ 
-#if TRIAL
-                if (string.IsNullOrEmpty(this._text))
-                    return this._text;
-
-                if (this.Format == BodyFormat.Html)
-                    return ProductHelper.GetTrialString(string.Empty, TrialStringType.LongHtml)
-                    + this._text + ProductHelper.GetTrialString(string.Empty, TrialStringType.LongHtml);
-                else
-                    return ProductHelper.GetTrialString(this._text, TrialStringType.LongText);
-#else
                 string ret = this._text;
                 ret = ret.Replace("FLAGS (Seen)", string.Empty);
                 return ret;
-#endif
 
 			}
 			set

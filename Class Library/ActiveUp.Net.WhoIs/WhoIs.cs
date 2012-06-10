@@ -1396,11 +1396,6 @@ namespace ActiveUp.Net.WhoIs
 					results.Add(result,server);
 				}
 
-				catch(TrialException te)
-				{
-					results.Add(result,server,te);
-				}
-
 				catch(WhoisException we)
 				{
 					results.Add(result,server,we);

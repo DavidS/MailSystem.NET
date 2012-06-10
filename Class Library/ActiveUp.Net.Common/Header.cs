@@ -415,20 +415,11 @@ namespace ActiveUp.Net.Mail
                 else
                     subject = null;
 
-#if TRIAL
-                return ProductHelper.GetTrialString(subject, TrialStringType.ShortText);
-#else
                 return subject;
-#endif
             }
             set
             {
-#if TRIAL
-                this.AddHeaderField("Subject", ProductHelper.GetTrialString(value, TrialStringType.ShortText));
-#else
                 this.AddHeaderField("Subject", value);
-#endif
-                //this.AddHeaderField("Subject", value);
             }
         }
 

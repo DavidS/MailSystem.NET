@@ -47,11 +47,6 @@ namespace ActiveUp.Net.Mail
 			//_logFile = string.Empty;
 			//_logInMemory = true;
             //_logLevel = 0;
-
-//#if TRIAL
-//            if (DateTime.Now > new DateTime(2007, 6, 30))
-//                throw new Exception("Trial Version Expired. Please register.");
-//#endif
 		}
 
 		/*/// <summary>

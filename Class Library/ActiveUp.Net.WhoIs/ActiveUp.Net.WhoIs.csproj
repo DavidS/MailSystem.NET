@@ -111,7 +111,6 @@
     <Compile Include="Server.cs" />
     <Compile Include="ServerCollection.cs" />
     <Compile Include="ServerDefinition.cs" />
-    <Compile Include="TrialException.cs" />
     <Compile Include="WhoIs.cs" />
     <Compile Include="WhoisException.cs" />
   </ItemGroup>

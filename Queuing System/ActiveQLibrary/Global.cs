@@ -437,35 +437,18 @@ namespace ActiveQLibrary
 
 			catch(Exception ex)
 			{
-				Type trialExpired = _activeMail.GetType("ActiveUp.Licensing.TrialException",true);
-				if (ex.InnerException.GetType() == trialExpired)
+				if (ex.InnerException != null)
 				{
-					Log.WriteError(string.Format("[INITIALIZE] Trial version of ActiveMail has expired, please register at www.activeup.com."));
-					Log.WriteError(string.Format("[INITIALIZE] Mailing operation are disabled."));
-
-					ev.WriteEntry("Trial version of ActiveMail has expired, please register at www.activeup.com.\nMailing operation are disabled.",EventLogEntryType.Error);
-
-					PageActiveMailExpired pageMailExpired = new PageActiveMailExpired();
-					pageMailExpired.ShowDialog();
-
-					_activeMail = null;
+					Log.WriteError(string.Format("[INITIALIZE] Error loading '{0}'",_libraryMailFile));
+					Log.WriteError("[INITIALIZE] " + ex.InnerException.Message);
+					Log.WriteError("[INITIALIZE] " + ex.InnerException.StackTrace);
 				}
 				else
 				{
-					if (ex.InnerException != null)
-					{
-						Log.WriteError(string.Format("[INITIALIZE] Error loading '{0}'",_libraryMailFile));
-						Log.WriteError("[INITIALIZE] " + ex.InnerException.Message);
-						Log.WriteError("[INITIALIZE] " + ex.InnerException.StackTrace);
-					}
-					else
-					{
-						Log.WriteError(string.Format("[INITIALIZE] Error loading '{0}'",_libraryMailFile));
-						Log.WriteError("[INITIALIZE] " + ex.Message);
-						Log.WriteError("[INITIALIZE] " + ex.StackTrace);
-					}
+					Log.WriteError(string.Format("[INITIALIZE] Error loading '{0}'",_libraryMailFile));
+					Log.WriteError("[INITIALIZE] " + ex.Message);
+					Log.WriteError("[INITIALIZE] " + ex.StackTrace);
 				}
-
 			}
 
 			// Initalization for the midnigth event

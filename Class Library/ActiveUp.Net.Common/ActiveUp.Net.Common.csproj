@@ -161,7 +161,6 @@
     <Compile Include="Parser.cs" />
     <None Include="Parserv1.cs" />
     <Compile Include="ParsingException.cs" />
-    <Compile Include="ProductHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueuingService.cs" />
     <Compile Include="Region.cs" />

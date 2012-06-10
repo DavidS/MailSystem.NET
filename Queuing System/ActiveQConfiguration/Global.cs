@@ -120,17 +120,6 @@ namespace ActiveQConfiguration
 
 			catch (Exception ex)
 			{
-				/*Type trialExpired = _activeMail.GetType("ActiveUp.Mail.Common.TrialExpiredException",true);
-				if (ex.InnerException.GetType() == trialExpired)
-				{
-					_stateActiveMail = StateLibraryActiveMail.expired;
-					_activeMail = null;
-				}
-
-				else
-				{
-					MessageBox.Show(ex.Message,"Error loading ActiveUp.Net.Mail.dll",MessageBoxButtons.OK,MessageBoxIcon.Error);
-				}*/
                 MessageBox.Show(ex.Message, "Error loading ActiveUp.Net.Mail.dll", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
