@@ -272,7 +272,7 @@ namespace ActiveUp.Net.Mail
 
         IAsyncResult BeginSearch(string charset, string query, AsyncCallback callback);
 
-        string EndSearch(IAsyncResult result);
+        int[] EndSearch(IAsyncResult result);
 
 		/// <summary>
 		/// Search for messages accoridng to the given query.
