@@ -444,9 +444,9 @@ namespace ActiveUp.Net.Mail
             return this._delegateSearchStringString.BeginInvoke(charset, query, callback, this._delegateSearchStringString);
         }
 
-        public string EndSearch(IAsyncResult result)
+        public int[] EndSearch(IAsyncResult result)
         {
-            return (string)result.AsyncState.GetType().GetMethod("EndInvoke").Invoke(result.AsyncState, new object[] { result });
+            return (int[])result.AsyncState.GetType().GetMethod("EndInvoke").Invoke(result.AsyncState, new object[] { result });
         }
 
 		/// <summary>
